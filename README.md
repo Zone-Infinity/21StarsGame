@@ -102,12 +102,12 @@ So the truth is:
 The original game uses 21 stars and allows picking 1–4 stars.  
 In that case, the “magic” number is 5, because:
 
-- You can pick from 1 to 4 → i.e., from 1 to (5 − 1)
+- You can pick from 1 to 4 → i.e., from 1 to (5 - 1)
 - The winning strategy is to make sure each turn pair (player and opponent) sums to 5.
 
 This idea generalizes to **any integer n ≥ 3**:
 
-- On each turn, a player may pick from **1 to n − 1** stars.
+- On each turn, a player may pick from **1 to n - 1** stars.
 - Let `n` be the target sum you want each *pair of turns* (player and opponent) to add up to.
 - If the starting number of stars `S` is of the form
 
@@ -117,19 +117,9 @@ $$
 
 for some integer `k ≥ 1`, then the **second player** can always win with perfect play.
 
-These numbers
+These numbers `1, n + 1, 2n + 1, 3n + 1, ...` are the **losing positions** for the player whose turn it is.
 
-$$
-1, n + 1, 2n + 1, 3n + 1,...
-$$
-
-are the **losing positions** for the player whose turn it is.
-
-The second player’s strategy is simple:
-
-$$
-first\_player\_pick+second\_player\_pick=n
-$$
+The second player’s strategy is simple: `first_player_pick + second_player_pick = n`
 
 on every round.
 
